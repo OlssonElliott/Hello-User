@@ -1,6 +1,6 @@
 # Hello-User
 inlämningsuppgift
-Krav och utgångspunkt för godkänt.
+**Utgångspunkt för projektet**
 
 För G:
 3st html:
@@ -19,4 +19,23 @@ Skapa Controller methods för samtliga html.
 -  ManageMembersController **(Visa ManageMembers.html, fomulär för att lägga till)**
 -  ListMembersController **(Visa hela listan för alla medlemmar)**
 
+-------------------------------------------------------------------------------------------------------------
+**Har idag uppfyllt kraven med grundläggande funktionalitet 29/10.** 
+
+- Det finns 3 sidor. Startsida / Listsida / Formulärsida.
+- På formulärsidan går det spara nya medlemmar.
+- Dem sparade medlemmar sparas i backend, i en ArrayList.
+- Från Listsidan går det att ta bort medlemmar.
+
+
+**Påbörjar nu punkterna för VG.**
+
+-------------------------------------------------------------------------------------------------------------
+
+För VG:
+-Skapa en inloggningssida, där admin kan logga in. Inlogg: användarnamn: "admin".  lösenord: "admin".
+-Inloggad admin sparas i localstorage, uppdateras sidan är admin fortfarande inloggad.
+-På listsidan skall endast inloggad admin kunna ta bort medlem, men alla ska kunna se.
+-Formulärssidan skall endast kunna ses och användas av inloggad admin.
+-Avgör själv om admin ska ha egna sidor eller dela samma sidor som icke-admin.
 
