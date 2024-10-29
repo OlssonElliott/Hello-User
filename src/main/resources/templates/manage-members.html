@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Manage members</title>
+    <script src="@{/script.js}" defer></script>
 </head>
 <body>
     <h1>Hantera medlemmar temp text</h1>
+
     <a th:href="@{/}">Startsida</a>
     <a th:href="@{/list}">Lista</a>
+    <a th:href="@{/admin}">Admin login</a>
+
     <form method="post" th:action="@{/new-member}" th:object="${newMember}">
         <span>Namn:</span>
         <input type="text" th:field="*{name}">
@@ -16,5 +20,6 @@
         <input type="text" th:field="*{age}" th:value="''">
         <input type="submit">
     </form>
+
 </body>
 </html>
