@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="https://www.thymeleaf.org/">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin login</title>
+    <script type="text/javascript" th:src="@{/script.js}" defer></script>
+</head>
+<body>
+    <h1>Admin login:</h1>
+    <a th:href="@{/}">Startsida</a>
+    <a th:href="@{/list}">Lista</a>
+    <a th:href="@{/membercontrol}">Hantera medlemmar</a>
+    <br>
+
+    <label for="name">Användarnamn:</label>
+    <input type="text" id="name">
+
+    <label for="password">Lösenord:</label>
+    <input type="text" id="password">
+    <button id="loginBtn">Logga in</button>
+</body>
+</html>

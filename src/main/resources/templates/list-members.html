@@ -4,11 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medlemslista</title>
+    <script src="@{/script.js}" defer></script>
 </head>
 <body>
     <h1>Temp text för Medlemslista</h1>
+
     <a th:href="@{/}">Startsida</a>
     <a th:href="@{/membercontrol}">Hantera medlemmar</a>
+    <a th:href="@{/admin}">Admin login</a>
     <h2>Medlemmar:</h2>
     <ul>
         <li th:each="item : ${members}">
