@@ -11,14 +11,14 @@ public class ManageMemberController {
 
     @GetMapping("/membercontrol")
 public String getListpage(Model model) {
-    Member newMember = new Member("", "");
+    Member newMember = new Member("", "", 0);
     model.addAttribute("newMember", newMember);
     return "manage-members";
 }
 
 @PostMapping("/new-member")
 public String postMethodName(@RequestParam("name") String name, @RequestParam("age") String age) {
-    ListMemberController.members.add(new Member(name, age));
+    ListMemberController.members.add(new Member(name, age, ListMemberController.members.size() + 1));
     return "redirect:/membercontrol";
 }
 
