@@ -33,9 +33,9 @@ Skapa Controller methods för samtliga html.
 -------------------------------------------------------------------------------------------------------------
 
 För VG:
--Skapa en inloggningssida, där admin kan logga in. Inlogg: användarnamn: "admin".  lösenord: "admin".
--Inloggad admin sparas i localstorage, uppdateras sidan är admin fortfarande inloggad.
--På listsidan skall endast inloggad admin kunna ta bort medlem, men alla ska kunna se.
--Formulärssidan skall endast kunna ses och användas av inloggad admin.
--Avgör själv om admin ska ha egna sidor eller dela samma sidor som icke-admin.
+- Skapa en inloggningssida, där admin kan logga in. Inlogg: användarnamn: "admin".  lösenord: "admin".
+- Inloggad admin sparas i localstorage, uppdateras sidan är admin fortfarande inloggad.
+- På listsidan skall endast inloggad admin kunna ta bort medlem, men alla ska kunna se.
+- Formulärssidan skall endast kunna ses och användas av inloggad admin.
+- Avgör själv om admin ska ha egna sidor eller dela samma sidor som icke-admin.
 
