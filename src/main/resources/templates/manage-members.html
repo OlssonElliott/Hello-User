@@ -9,5 +9,12 @@
     <h1>Hantera medlemmar temp text</h1>
     <a th:href="@{/}">Startsida</a>
     <a th:href="@{/list}">Lista</a>
+    <form method="post" th:action="@{/new-member}" th:object="${newMember}">
+        <span>Namn:</span>
+        <input type="text" th:field="*{name}">
+        <span>Ålder:</span>
+        <input type="text" th:field="*{age}" th:value="''">
+        <input type="submit">
+    </form>
 </body>
 </html>
