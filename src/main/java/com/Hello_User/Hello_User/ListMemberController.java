@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
 
@@ -14,7 +15,8 @@ static{
     members.add(new Member("Elliott", 32));
 }
 @GetMapping("/list")
-public String getListpage() {
+public String getListpage(Model model) {
+    model.addAttribute("members", members);
     return "list-members";
 }
 
