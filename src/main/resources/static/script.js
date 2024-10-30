@@ -12,8 +12,7 @@ const loginBtn = document.getElementById("loginBtn");
             console.log("FUNKAR")
             localStorage.setItem("loggedIn", "true");
             loginMessage.textContent = "SUCCESS";
-            displayAdminLoggedIn();
+            adminLoggedIn();
         }
         else { loginMessage.textContent = "WRONG USERNAME OR PASSWORD"};
     });
-    displayAdminLoggedIn();

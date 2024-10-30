@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medlemslista</title>
     <script type="text/javascript" th:src="@{/admin.js}" defer></script>
+    <script type="text/javascript" th:src="@{/script.js}" defer></script>
 </head>
 <body>
     <div class="adminClass"></div>
     <h1>Temp text för Medlemslista</h1>
 
     <a th:href="@{/}">Startsida</a>
-    <a th:href="@{/membercontrol}">Hantera medlemmar</a>
+    <a class="adminLink" th:href="@{/membercontrol}">Hantera medlemmar</a>
     <a th:href="@{/admin}">Admin login</a>
     <h2>Medlemmar:</h2>
     <ul>
