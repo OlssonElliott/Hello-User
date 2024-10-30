@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Startsida</title>
-    <script src="@{/script.js}" defer></script>
+    <script type="text/javascript" th:src="@{/admin.js}" defer></script>
 </head>
 <body>
+    <div class="adminClass"></div>
     <h1>Välkommen till Elliotts förening</h1>
 
     <a th:href="@{/list}">Lista</a>
