@@ -1,4 +1,6 @@
-//admin behörigiheter:
+//admin behörigiheter
+
+//stående variabler
 const adminClass = document.getElementsByClassName("adminClass")[0];
 
 let showLoggedIn = document.createElement("span");
@@ -9,7 +11,10 @@ let logoutBtn = document.createElement("button");
 logoutBtn.className = "logoutBtn";
 logoutBtn.textContent = "Logga ut";
 
-//funktion, visa/ta bort text admin inloggad.
+let removeMember = document.getElementsByClassName("removeMember");
+
+
+//funktion, visa/ta bort text/knapp för admin inloggad.
 function displayAdminLoggedIn(){
     if (localStorage.getItem("loggedIn") === "true") {
         adminClass.appendChild(showLoggedIn);
@@ -22,8 +27,17 @@ function displayAdminLoggedIn(){
 }
 displayAdminLoggedIn();
 
-//logga ut knapp, tar bort admin ifrån local storage.
+//länkar logga ut knapp med: ta bort admin ifrån local storage.
 logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("loggedIn");
     displayAdminLoggedIn();
+    location.reload();
 });
+
+//gömmer icke admin funktioner på hemsidan.
+
+if (localStorage.getItem("loggedIn") !== "true"){
+    for (let i = 0; i < removeMember.length; i++){
+        removeMember[i].textContent = "";
+    }
+}

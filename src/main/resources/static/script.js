@@ -1,3 +1,5 @@
+//endast för admin.html
+
 //login knapp, lägger till admin i local storage.
 const loginBtn = document.getElementById("loginBtn");
     loginBtn.addEventListener("click", () => {
