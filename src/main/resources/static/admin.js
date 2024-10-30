@@ -13,6 +13,8 @@ logoutBtn.textContent = "Logga ut";
 
 let removeMember = document.getElementsByClassName("removeMember");
 let memberForm = document.getElementById("memberForm");
+let adminLink = document.getElementsByClassName("adminLink");
+
 
 
 //Loggar in admin när rätt uppgifter anges. Tar bort admin funktioner för icke admin.
@@ -20,16 +22,23 @@ function adminLoggedIn(){
     if (localStorage.getItem("loggedIn") === "true") {
         adminClass.appendChild(showLoggedIn);
         adminClass.appendChild(logoutBtn);
+        for (let i = 0; i < adminLink.length; i++){
+            adminLink[i].style.display = "inline";
+        }
         }
     else {
-        showLoggedIn.remove();
-        logoutBtn.remove();
-        for (let i = 0; i < removeMember.length; i++){
-            removeMember[i].textContent = "";
-        }
-        if (memberForm){
-            memberForm.remove();
-        }
+        if (showLoggedIn){showLoggedIn.remove();}
+        if (logoutBtn){logoutBtn.remove();}
+        if (memberForm) {memberForm.remove();}
+            for (let i = 0; i < removeMember.length; i++){
+                removeMember[i].textContent = "";
+            }
+
+            for (let i = 0; i < adminLink.length; i++){
+                adminLink[i].style.display = "none";
+            }
+            
+        
     }
 }
 adminLoggedIn();
