@@ -16,7 +16,7 @@
     <h2>Medlemmar:</h2>
     <ul>
         <li th:each="item : ${members}">
-            <span th:text="|${item.name}, ${item.age}|"></span> <a th:href="@{/remove-member/{itemId}(itemId=${item.id})}">X</a>
+            <span th:text="|${item.name}, ${item.age}|"></span> <a class="removeMember" th:href="@{/remove-member/{itemId}(itemId=${item.id})}">X</a>
         </li>
     </ul>
 </body>
