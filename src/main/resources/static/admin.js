@@ -12,10 +12,11 @@ logoutBtn.className = "logoutBtn";
 logoutBtn.textContent = "Logga ut";
 
 let removeMember = document.getElementsByClassName("removeMember");
+let memberForm = document.getElementById("memberForm");
 
 
-//funktion, visa/ta bort text/knapp för admin inloggad.
-function displayAdminLoggedIn(){
+//Loggar in admin när rätt uppgifter anges. Tar bort admin funktioner för icke admin.
+function adminLoggedIn(){
     if (localStorage.getItem("loggedIn") === "true") {
         adminClass.appendChild(showLoggedIn);
         adminClass.appendChild(logoutBtn);
@@ -23,21 +24,22 @@ function displayAdminLoggedIn(){
     else {
         showLoggedIn.remove();
         logoutBtn.remove();
+        for (let i = 0; i < removeMember.length; i++){
+            removeMember[i].textContent = "";
+        }
+        if (memberForm){
+            memberForm.remove();
+        }
     }
 }
-displayAdminLoggedIn();
+adminLoggedIn();
 
 //länkar logga ut knapp med: ta bort admin ifrån local storage.
 logoutBtn.addEventListener("click", () => {
     localStorage.removeItem("loggedIn");
-    displayAdminLoggedIn();
+    adminLoggedIn();
     location.reload();
 });
 
-//gömmer icke admin funktioner på hemsidan.
 
-if (localStorage.getItem("loggedIn") !== "true"){
-    for (let i = 0; i < removeMember.length; i++){
-        removeMember[i].textContent = "";
-    }
-}
+
