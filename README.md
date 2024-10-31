@@ -39,3 +39,13 @@ För VG:
 - Formulärssidan skall endast kunna ses och användas av inloggad admin.
 - Avgör själv om admin ska ha egna sidor eller dela samma sidor som icke-admin.
 
+**Har idag uppfyllt kraven med grundläggande funktionalitet 31/10.** 
+
+- Det finns inloggningssida för admin, går att logga in med "admin", "admin.
+- LocalStorage jämför inmatning för inloggning, admin är inloggad även om sidan laddas om.
+- Innehållet på formulärsidan är endast tillgänglig för admin nu, samt länkar till formulärsidan är kopplade till inloggad admin.
+- Använder samma sidor till admin och icke admin.
+
+**Ser nu över semantik och kommer lägga till CSS**
+
+-------------------------------------------------------------------------------------------------------------
