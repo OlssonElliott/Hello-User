@@ -6,13 +6,16 @@
     <title>Startsida</title>
     <script type="text/javascript" th:src="@{/admin.js}" defer></script>
     <script type="text/javascript" th:src="@{/script.js}" defer></script>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
     <div class="adminClass"></div>
-    <h1>Välkommen till Elliotts förening</h1>
+    <h1 class="center">Välkommen till vår förening</h1>
 
-    <a th:href="@{/list}">Lista</a>
-    <a class="adminLink" th:href="@{/membercontrol}">Hantera medlemmar</a>
-    <a th:href="@{/admin}">Admin login</a>
+    <div class="links">
+        <a th:href="@{/list}">Lista</a>
+        <a class="adminLink" th:href="@{/membercontrol}">Hantera medlemmar</a>
+        <a th:href="@{/admin}">Admin login</a>
+    </div>
 </body>
 </html>

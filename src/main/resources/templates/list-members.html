@@ -6,19 +6,26 @@
     <title>Medlemslista</title>
     <script type="text/javascript" th:src="@{/admin.js}" defer></script>
     <script type="text/javascript" th:src="@{/script.js}" defer></script>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
     <div class="adminClass"></div>
-    <h1>Temp text för Medlemslista</h1>
+    <h1 class="center">Medlemslista</h1>
 
-    <a th:href="@{/}">Startsida</a>
-    <a class="adminLink" th:href="@{/membercontrol}">Hantera medlemmar</a>
-    <a th:href="@{/admin}">Admin login</a>
-    <h2>Medlemmar:</h2>
-    <ul>
-        <li th:each="item : ${members}">
-            <span th:text="|${item.name}, ${item.age}|"></span> <a class="removeMember" th:href="@{/remove-member/{itemId}(itemId=${item.id})}">X</a>
-        </li>
-    </ul>
+    <div class="links">
+        <a th:href="@{/}">Startsida</a>
+        <a class="adminLink" th:href="@{/membercontrol}">Hantera medlemmar</a>
+        <a th:href="@{/admin}">Admin login</a>
+    </div>
+
+    <div class="center">
+        <h2>Nuvarande medlemmar:</h2>
+        <ul>
+            <li th:each="item : ${members}">
+                <span th:text="|${item.name}, ${item.age}|"></span> <a class="removeMember" th:href="@{/remove-member/{itemId}(itemId=${item.id})}">X</a>
+            </li>
+        </ul>
+    </div>
+
 </body>
 </html>

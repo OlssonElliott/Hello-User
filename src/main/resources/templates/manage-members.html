@@ -6,22 +6,27 @@
     <title>Manage members</title>
     <script type="text/javascript" th:src="@{/admin.js}" defer></script>
     <script type="text/javascript" th:src="@{/script.js}" defer></script>
+    <link rel="stylesheet" th:href="@{/style.css}">
 </head>
 <body>
     <div class="adminClass"></div>
-    <h1>Hantera medlemmar temp text</h1>
+    <h1 class="center">Lägg till medlemmar</h1>
 
-    <a th:href="@{/}">Startsida</a>
-    <a th:href="@{/list}">Lista</a>
-    <a th:href="@{/admin}">Admin login</a>
+    <div class="links">
+        <a th:href="@{/}">Startsida</a>
+        <a th:href="@{/list}">Lista</a>
+        <a th:href="@{/admin}">Admin login</a>
+    </div>
 
-    <form id="memberForm" method="post" th:action="@{/new-member}" th:object="${newMember}">
-        <span>Namn:</span>
-        <input type="text" th:field="*{name}">
-        <span>Ålder:</span>
-        <input type="text" th:field="*{age}" th:value="''">
-        <input type="submit">
-    </form>
+    <div class="center">
+        <form id="memberForm" method="post" th:action="@{/new-member}" th:object="${newMember}">
+            <span>Namn:</span>
+            <input type="text" th:field="*{name}">
+            <span>Ålder:</span>
+            <input type="text" th:field="*{age}" th:value="''">
+            <input type="submit">
+        </form>
+    </div>
 
 </body>
 </html>

@@ -1,0 +1,25 @@
+body{
+    background-color:skyblue
+}
+
+.links{
+    text-align: center;
+}
+
+.links a{
+    margin: 0 15px;
+}
+
+.center {
+    text-align: center;
+}
+
+.center ul {
+    list-style-position: inside;
+    text-indent: -50px;
+}
+
+a{
+    color: black;
+}
+

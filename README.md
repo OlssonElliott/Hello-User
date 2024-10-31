@@ -49,3 +49,5 @@ För VG:
 **Ser nu över semantik och kommer lägga till CSS**
 
 -------------------------------------------------------------------------------------------------------------
+
+**Har nu städat upp kommentarer och fixat CSS**
