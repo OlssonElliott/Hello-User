@@ -1,4 +1,5 @@
-//admin behörigiheter
+//Admin behörigiheter
+
 
 //stående variabler
 const adminClass = document.getElementsByClassName("adminClass")[0];
@@ -14,7 +15,6 @@ logoutBtn.textContent = "Logga ut";
 let removeMember = document.getElementsByClassName("removeMember");
 let memberForm = document.getElementById("memberForm");
 let adminLink = document.getElementsByClassName("adminLink");
-
 
 
 //Loggar in admin när rätt uppgifter anges. Tar bort admin funktioner för icke admin.
@@ -42,6 +42,7 @@ function adminLoggedIn(){
     }
 }
 adminLoggedIn();
+
 
 //länkar logga ut knapp med: ta bort admin ifrån local storage.
 logoutBtn.addEventListener("click", () => {

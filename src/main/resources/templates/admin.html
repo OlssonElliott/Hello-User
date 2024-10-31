@@ -6,22 +6,29 @@
     <title>Admin login</title>
     <script type="text/javascript" th:src="@{/admin.js}" defer></script>
     <script type="text/javascript" th:src="@{/script.js}" defer></script>
+    <link rel="stylesheet" th:href="@{/style.css}">
+
 </head>
 <body>
     <div class="adminClass"></div>
 
-    <h1>Admin login:</h1>
-    <a th:href="@{/}">Startsida</a>
-    <a th:href="@{/list}">Lista</a>
-    <a class="adminLink" th:href="@{/membercontrol}">Hantera medlemmar</a>
+    <h1 class="center">Admin login:</h1>
+
+    <div class="links">
+        <a th:href="@{/}">Startsida</a>
+        <a th:href="@{/list}">Lista</a>
+        <a class="adminLink" th:href="@{/membercontrol}">Hantera medlemmar</a>
+    </div>
     <br>
 
-    <label for="name">Användarnamn:</label>
-    <input type="text" id="name">
-
-    <label for="password">Lösenord:</label>
-    <input type="text" id="password">
-    <button id="loginBtn">Logga in</button>
-    <span id="loginMessage"></span>
+    <div class="center">
+        <label for="name">Användarnamn:</label>
+        <input type="text" id="name">
+    
+        <label for="password">Lösenord:</label>
+        <input type="text" id="password">
+        <button id="loginBtn">Logga in</button>
+        <span id="loginMessage"></span>
+    </div>
 </body>
 </html>

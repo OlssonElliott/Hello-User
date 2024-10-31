@@ -2,6 +2,7 @@
 
 //login knapp, lägger till admin i local storage.
 const loginBtn = document.getElementById("loginBtn");
+if (loginBtn){
     loginBtn.addEventListener("click", () => {
         let loginName = document.getElementById("name").value;
         let loginPassword = document.getElementById("password").value;
@@ -16,3 +17,4 @@ const loginBtn = document.getElementById("loginBtn");
         }
         else { loginMessage.textContent = "WRONG USERNAME OR PASSWORD"};
     });
+}
